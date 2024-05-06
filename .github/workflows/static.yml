@@ -34,9 +34,7 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name : move to maven package
-        run: cd maven-template
-      - name : Run maven package
-        run: mvn package
+        run: cd maven-template && mvn package
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
